@@ -13,7 +13,7 @@ export const useMounted = (): () => boolean => {
     },
     []
   );
-
+ 
   return useCallback(
     (): boolean => isMounted.current,
     []
