@@ -5,13 +5,7 @@ import { Avatar, Paper, Stack, Typography } from '@mui/material';
 import { useSelector } from '../../../../store';
 import type { Comment, Member } from '../../../../types/kanban';
 
-const useAuthor = (authorId: string): Member | null => {
-  return useSelector((state) => {
-    const { members } = state.kanban;
 
-    return members.byId[authorId] || null;
-  });
-};
 
 interface TaskCommentProps {
   comment: Comment;
@@ -19,9 +13,7 @@ interface TaskCommentProps {
 
 export const TaskComment: FC<TaskCommentProps> = (props) => {
   const { comment, ...other } = props;
-  const author = useAuthor(comment.authorId);
 
-  const avatar = author?.avatar || undefined;
   const createdAt = format(comment.createdAt, 'MMM dd, yyyy \'at\' hh:mm a');
 
   return (
@@ -31,13 +23,11 @@ export const TaskComment: FC<TaskCommentProps> = (props) => {
       spacing={2}
       {...other}
     >
-      <Avatar src={avatar} />
       <Stack
         spacing={1}
         sx={{ flexGrow: 1 }}
       >
         <Typography variant="subtitle2">
-          {author?.name}
         </Typography>
         <Paper
           sx={{

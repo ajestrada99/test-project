@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { ApexOptions } from 'apexcharts';
 import { Box, Card, Stack, Typography, Unstable_Grid2 as Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 type ChartSeries = {
   data: number[];
@@ -77,11 +77,11 @@ const Graphic: FC = () => {
         width: 177
       }}
     >
-      <Chart
+      {/* <Chart
         options={chartOptions}
         series={chartSeries}
         type="line"
-      />
+      /> */}
     </Box>
   );
 };

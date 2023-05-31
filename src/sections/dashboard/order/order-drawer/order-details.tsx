@@ -16,8 +16,6 @@ import {
   Typography,
   useMediaQuery
 } from '@mui/material';
-import { PropertyList } from '../../../../components/property-list';
-import { PropertyListItem } from '../../../../components/property-list-item';
 import type { SeverityPillColor } from '../../../../components/severity-pill';
 import { SeverityPill } from '../../../../components/severity-pill';
 import { Scrollbar } from '../../../../components/scrollbar';
@@ -72,84 +70,7 @@ export const OrderDetails: FC<OrderDetailsProps> = (props) => {
             Edit
           </Button>
         </Stack>
-        <PropertyList>
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="ID"
-            value={order.id}
-          />
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Number"
-            value={order.number}
-          />
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Customer"
-          >
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              {order.customer.name}
-            </Typography>
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              {order.customer.address1}
-            </Typography>
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              {order.customer.city}
-            </Typography>
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              {order.customer.country}
-            </Typography>
-          </PropertyListItem>
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Date"
-            value={createdAt}
-          />
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Promotion Code"
-            value={order.promotionCode}
-          />
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Total Amount"
-            value={totalAmount}
-          />
-          <PropertyListItem
-            align={align}
-            disableGutters
-            divider
-            label="Status"
-          >
-            <SeverityPill color={statusColor}>
-              {order.status}
-            </SeverityPill>
-          </PropertyListItem>
-        </PropertyList>
+       
         <Stack
           alignItems="center"
           direction="row"

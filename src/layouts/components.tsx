@@ -9,12 +9,10 @@ import {
   Divider,
   Link,
   Stack,
-  SvgIcon,
   Typography
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { BreadcrumbsSeparator } from '../components/breadcrumbs-separator';
-import { paths } from '../paths';
+import { BreadcrumbsSeparator } from '../oldVersion/breadcrumbs-separator';
 
 const LayoutRoot = styled('div')(
   ({ theme }) => ({
@@ -58,23 +56,6 @@ export const Layout: FC<LayoutProps> = (props) => {
           <Stack spacing={3}>
             {!breadcrumbs && (
               <div>
-                <Link
-                  color="text.primary"
-                  component={NextLink}
-                  href={paths.components.index}
-                  sx={{
-                    alignItems: 'center',
-                    display: 'inline-flex'
-                  }}
-                  underline="hover"
-                >
-                  <SvgIcon sx={{ mr: 1 }}>
-                    <ArrowLeftIcon />
-                  </SvgIcon>
-                  <Typography variant="subtitle2">
-                    Components
-                  </Typography>
-                </Link>
               </div>
             )}
             <div>

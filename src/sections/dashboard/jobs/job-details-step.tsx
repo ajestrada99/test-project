@@ -119,20 +119,7 @@ export const JobDetailsStep: FC<JobDetailsStepProps> = (props) => {
         direction="row"
         spacing={3}
       >
-        <MobileDatePicker
-          label="Start Date"
-          inputFormat="MM/dd/yyyy"
-          value={startDate}
-          onChange={handleStartDateChange}
-          renderInput={(inputProps) => <TextField {...inputProps} />}
-        />
-        <MobileDatePicker
-          label="End Date"
-          inputFormat="MM/dd/yyyy"
-          value={endDate}
-          onChange={handleEndDateChange}
-          renderInput={(inputProps) => <TextField {...inputProps} />}
-        />
+       
       </Stack>
       <Stack
         alignItems="center"

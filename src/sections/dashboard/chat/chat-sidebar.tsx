@@ -43,11 +43,11 @@ const getThreadKey = (thread: Thread, userId: string): string | undefined => {
 };
 
 const useThreads = (): { byId: Record<string, Thread>, allIds: string[] } => {
-  return useSelector((state) => state.chat.threads);
+  return useSelector<any>((state) => state);
 };
 
 const useCurrentThreadId = (): string | undefined => {
-  return useSelector((state) => state.chat.currentThreadId);
+  return useSelector<any>((state) => state);
 };
 
 interface ChatSidebarProps {
@@ -69,9 +69,9 @@ export const ChatSidebar: FC<ChatSidebarProps> = (props) => {
 
   const handleCompose = useCallback(
     (): void => {
-      router.push(paths.dashboard.chat + '?compose=true');
+      // router.push(paths.dashboard.chat + '?compose=true');
     },
-    [router]
+    []
   );
 
   const handleSearchChange = useCallback(
@@ -121,9 +121,8 @@ export const ChatSidebar: FC<ChatSidebarProps> = (props) => {
       setSearchFocused(false);
       setSearchQuery('');
 
-      router.push(paths.dashboard.chat + `?threadKey=${threadKey}`);
     },
-    [router]
+    []
   );
 
   const handleThreadSelect = useCallback(
@@ -131,13 +130,9 @@ export const ChatSidebar: FC<ChatSidebarProps> = (props) => {
       const thread = threads.byId[threadId];
       const threadKey = getThreadKey(thread, user.id);
 
-      if (!threadKey) {
-        router.push(paths.dashboard.chat);
-      } else {
-        router.push(paths.dashboard.chat + `?threadKey=${threadKey}`);
-      }
+     
     },
-    [router, threads, user]
+    [threads, user]
   );
 
   const content = (

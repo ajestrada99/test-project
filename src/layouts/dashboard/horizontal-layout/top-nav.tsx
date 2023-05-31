@@ -8,11 +8,10 @@ import type { Theme } from '@mui/material';
 import { Box, IconButton, Stack, SvgIcon, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Logo } from '../../../components/logo';
-import { Scrollbar } from '../../../components/scrollbar';
+import { Scrollbar } from '@/oldVersion/scrollbar';
 import { paths } from '../../../paths';
 import type { NavColor } from '../../../types/settings';
 import { AccountButton } from '../account-button';
-import { ContactsButton } from '../contacts-button';
 import type { Section } from '../config';
 import { LanguageSwitch } from '../language-switch';
 import { NotificationsButton } from '../notifications-button';
@@ -227,7 +226,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
         >
           <LanguageSwitch />
           <NotificationsButton />
-          <ContactsButton />
           <AccountButton />
         </Stack>
       </Stack>

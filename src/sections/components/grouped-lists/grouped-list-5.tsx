@@ -17,7 +17,7 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
-import { CircularProgress } from '../../../components/circular-progress';
+// import { CircularProgress } from '../../../components/circular-progress';
 import { Scrollbar } from '../../../components/scrollbar';
 
 interface Product {
@@ -208,7 +208,7 @@ export const GroupedList5: FC = () => (
                           Conversion Rate
                         </Typography>
                       </div>
-                      <CircularProgress value={product.conversionRate} />
+                      {/* <CircularProgress value={product.conversionRate} /> */}
                     </Stack>
                   </TableCell>
                 </TableRow>

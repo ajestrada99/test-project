@@ -16,7 +16,7 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 type ChartSeries = number[];
 
@@ -123,12 +123,12 @@ export const QuickStats9: FC = () => {
                 width: 200
               }}
             >
-              <Chart
+              {/* <Chart
                 height={200}
                 options={chartOptions}
                 series={chartSeries}
                 type="donut"
-              />
+              /> */}
             </Box>
             <Stack
               spacing={4}

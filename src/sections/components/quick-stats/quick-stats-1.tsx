@@ -3,7 +3,7 @@ import type { ApexOptions } from 'apexcharts';
 import DotsHorizontalIcon from '@untitled-ui/icons-react/build/esm/DotsHorizontal';
 import { Box, Card, CardHeader, Divider, IconButton, SvgIcon, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 type ChartSeries = number[];
 
@@ -92,12 +92,12 @@ export const QuickStats1: FC = () => {
         />
         <Divider />
         <Box sx={{ p: 2 }}>
-          <Chart
+          {/* <Chart
             height={300}
             options={chartOptions}
             series={chartSeries}
             type="donut"
-          />
+          /> */}
         </Box>
         <Divider />
         <Box sx={{ display: 'flex' }}>

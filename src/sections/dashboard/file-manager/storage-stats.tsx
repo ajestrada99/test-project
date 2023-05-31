@@ -18,8 +18,6 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
-import { FileIcon } from '../../../components/file-icon';
 import { bytesToSize } from '../../../utils/bytes-to-size';
 
 const useChartOptions = (usage: string): ApexOptions => {
@@ -150,13 +148,7 @@ export const StorageStats: FC = () => {
               mb: '-100px'
             }}
           >
-            <Chart
-              width={260}
-              height={260}
-              options={chartOptions}
-              series={chartSeries}
-              type="radialBar"
-            />
+            
           </Box>
           <Typography
             variant="h6"
@@ -185,7 +177,6 @@ export const StorageStats: FC = () => {
               >
                 <ListItemIcon>
                   <Box sx={{ color: 'primary.main' }}>
-                    <FileIcon extension={total.extension} />
                   </Box>
                 </ListItemIcon>
                 <ListItemText

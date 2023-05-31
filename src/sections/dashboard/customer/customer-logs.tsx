@@ -12,7 +12,6 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
-import { MoreMenu } from '../../../components/more-menu';
 import { Scrollbar } from '../../../components/scrollbar';
 import { SeverityPill } from '../../../components/severity-pill';
 import type { CustomerLog } from '../../../types/customer';
@@ -26,10 +25,6 @@ export const CustomerLogs: FC<CustomerLogsProps> = (props) => {
 
   return (
     <Card {...other}>
-      <CardHeader
-        action={<MoreMenu />}
-        title="Recent Logs"
-      />
       <Scrollbar>
         <Table sx={{ minWidth: 700 }}>
           <TableHead>

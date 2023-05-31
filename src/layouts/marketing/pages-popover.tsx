@@ -47,11 +47,11 @@ const sections: Section[] = [
           },
           {
             title: 'Logistics',
-            path: paths.dashboard.logistics.index
+            path: 'Browse Components'
           },
           {
             title: 'File Manager',
-            path: paths.dashboard.fileManager
+            path: 'Browse Components'
           },
           {
             title: 'Academy',
@@ -65,7 +65,7 @@ const sections: Section[] = [
     items: [
       {
         title: 'Blog',
-        path: paths.dashboard.blog.index,
+        path:'Browse Components',
         icon: (
           <SvgIcon fontSize="small">
             <LayoutAlt02Icon />
@@ -74,7 +74,7 @@ const sections: Section[] = [
       },
       {
         title: 'Pricing',
-        path: paths.pricing,
+        path:'Browse Components',
         icon: (
           <SvgIcon fontSize="small">
             <CreditCard01Icon />
@@ -83,7 +83,7 @@ const sections: Section[] = [
       },
       {
         title: 'Contact',
-        path: paths.contact,
+        path: 'Browse Components',
         icon: (
           <SvgIcon fontSize="small">
             <Mail04Icon />
@@ -92,7 +92,7 @@ const sections: Section[] = [
       },
       {
         title: 'Checkout',
-        path: paths.checkout,
+        path: 'Browse Components',
         icon: (
           <SvgIcon fontSize="small">
             <LogOut01Icon />

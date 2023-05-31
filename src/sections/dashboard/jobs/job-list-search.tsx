@@ -13,7 +13,6 @@ import {
   SvgIcon,
   Typography
 } from '@mui/material';
-import { MultiSelect } from '../../../components/multi-select';
 
 interface SearchChip {
   label: string;
@@ -241,26 +240,7 @@ export const JobListSearch: FC = (props) => {
         spacing={2}
         sx={{ p: 1 }}
       >
-        <MultiSelect
-          label="Type"
-          options={typeOptions}
-          value={typeValues}
-        />
-        <MultiSelect
-          label="Level"
-          options={levelOptions}
-          value={levelValues}
-        />
-        <MultiSelect
-          label="Location"
-          options={locationOptions}
-          value={locationValues}
-        />
-        <MultiSelect
-          label="Role"
-          options={roleOptions}
-          value={roleValues}
-        />
+        
         <Box sx={{ flexGrow: 1 }} />
         <FormControlLabel
           control={<Checkbox defaultChecked />}

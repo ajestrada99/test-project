@@ -84,26 +84,6 @@ export const CompanyOverview: FC<CompanyOverviewProps> = (props) => {
         <Typography variant="h6">
           Jobs
         </Typography>
-        <Link
-          color="inherit"
-          component={NextLink}
-          href={paths.dashboard.jobs.companies.details}
-          variant="subtitle2"
-          sx={{
-            alignItems: 'center',
-            display: 'flex'
-          }}
-        >
-          <Typography
-            sx={{ mr: 1 }}
-            variant="subtitle2"
-          >
-            Jobs
-          </Typography>
-          <SvgIcon>
-            <ArrowRightIcon />
-          </SvgIcon>
-        </Link>
       </Stack>
       <Box sx={{ mt: 3 }}>
         <CompanyJobs jobs={company.jobs} />
@@ -119,26 +99,7 @@ export const CompanyOverview: FC<CompanyOverviewProps> = (props) => {
         <Typography variant="h6">
           Members
         </Typography>
-        <Link
-          color="inherit"
-          component={NextLink}
-          href={paths.dashboard.jobs.companies.details}
-          variant="subtitle2"
-          sx={{
-            alignItems: 'center',
-            display: 'flex'
-          }}
-        >
-          <Typography
-            sx={{ mr: 1 }}
-            variant="subtitle2"
-          >
-            Members
-          </Typography>
-          <SvgIcon>
-            <ArrowRightIcon />
-          </SvgIcon>
-        </Link>
+        
       </Stack>
       <Box
         sx={{

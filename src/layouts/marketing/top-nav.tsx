@@ -32,7 +32,7 @@ interface Item {
 const items: Item[] = [
   {
     title: 'Components',
-    path: paths.components.index
+    path: 'Browse Components'
   },
   {
     title: 'Pages',
@@ -40,7 +40,7 @@ const items: Item[] = [
   },
   {
     title: 'Docs',
-    path: paths.docs.welcome
+    path: 'Browse Components'
   }
 ];
 

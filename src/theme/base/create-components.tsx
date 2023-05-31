@@ -1,8 +1,8 @@
 import type { Components } from '@mui/material/styles/components';
 import { createTheme, inputLabelClasses, tableCellClasses } from '@mui/material';
-import { CheckboxIcon } from '../../components/checkbox-icon';
-import { CheckboxCheckedIcon } from '../../components/checkbox-checked-icon';
-import { CheckboxIntermediateIcon } from '../../components/checkbox-intermediate-icon';
+import { CheckboxIcon } from '@/oldVersion/checkbox-icon';
+import { CheckboxCheckedIcon } from '@/oldVersion/checkbox-checked-icon';
+import { CheckboxIntermediateIcon } from '@/oldVersion/checkbox-intermediate-icon';
 
 // Used only to create transitions
 const muiTheme = createTheme();

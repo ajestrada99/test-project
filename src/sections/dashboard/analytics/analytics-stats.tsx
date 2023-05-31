@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import type { ApexOptions } from 'apexcharts';
 import { Box, Card, CardActions, Divider, Stack, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 const useChartOptions = (): ApexOptions => {
   const theme = useTheme();
@@ -108,12 +108,12 @@ export const AnalyticsStats: FC<AnalyticsStatsProps> = (props) => {
           </Typography>
         </div>
         <Box sx={{ width: 200 }}>
-          <Chart
+          {/* <Chart
             height={100}
             options={chartOptions}
             series={chartSeries}
             type="area"
-          />
+          /> */}
         </Box>
       </Stack>
       <Divider />

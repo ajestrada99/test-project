@@ -1,38 +1,19 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { usePageView } from '../hooks/use-page-view';
-import { Layout as MarketingLayout } from '../layouts/marketing';
-import { HomeCta } from '../sections/home/home-cta';
-import { HomeFaqs } from '../sections/home/home-faqs';
-import { HomeFeatures } from '../sections/home/home-features';
-import { HomeHero } from '../sections/home/home-hero';
-import { HomeReviews } from '../sections/home/home-reviews';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { usePageView } from "@/hooks/use-page-view";
+import { Layout as AuthLayout } from "@/layouts/auth/classic-layout";
 
 const Page: NextPage = () => {
   usePageView();
-
   return (
     <>
       <Head>
-        <title>
-          Devias Kit PRO
-        </title>
+        <title>Foragro platform</title>
       </Head>
-      <main>
-        <HomeHero />
-        <HomeFeatures />
-        <HomeReviews />
-        <HomeCta />
-        <HomeFaqs />
-      </main>
     </>
   );
 };
 
-Page.getLayout = (page) => (
-  <MarketingLayout>
-    {page}
-  </MarketingLayout>
-);
+Page.getLayout = (page) => <AuthLayout>{page}</AuthLayout>;
 
 export default Page;

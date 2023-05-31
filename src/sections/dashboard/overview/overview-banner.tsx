@@ -56,18 +56,7 @@ export const OverviewBanner: FC = (props) => {
           Your favorite template has a new trendy look, more customization options, screens & more.
         </Typography>
         <Box sx={{ mt: 2 }}>
-          <Button
-            color="primary"
-            onClick={handleDrawerOpen}
-            startIcon={(
-              <SvgIcon>
-                <Settings04Icon />
-              </SvgIcon>
-            )}
-            variant="contained"
-          >
-            Open App Settings
-          </Button>
+          
         </Box>
       </Box>
     </Stack>

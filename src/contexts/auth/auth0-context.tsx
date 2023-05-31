@@ -3,7 +3,6 @@ import { createContext, useCallback, useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import { Auth0Client } from '@auth0/auth0-spa-js';
 import { auth0Config } from '../../config';
-import { paths } from '../../paths';
 import type { User } from '../../types/user';
 import { Issuer } from '../../utils/auth';
 
@@ -12,7 +11,7 @@ const auth0Client: Auth0Client = new Auth0Client({
   clientId: auth0Config.client_id!,
   cacheLocation: 'localstorage',
   authorizationParams: {
-    redirect_uri: auth0Config.base_url + paths.auth.auth0.callback
+    redirect_uri: auth0Config.base_url
   }
 });
 

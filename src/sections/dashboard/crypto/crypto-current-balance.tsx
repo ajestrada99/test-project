@@ -17,7 +17,6 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 const useChartOptions = (labels: string[]): ApexOptions => {
   const theme = useTheme();
@@ -123,12 +122,6 @@ export const CryptoCurrentBalance: FC<CryptoCurrentBalanceProp> = (props) => {
               width: 200
             }}
           >
-            <Chart
-              height={200}
-              options={chartOptions}
-              series={chartSeries}
-              type="donut"
-            />
           </Box>
           <Stack
             spacing={4}

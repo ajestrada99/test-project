@@ -12,7 +12,6 @@ import {
   Popover,
   Typography
 } from '@mui/material';
-import { Presence } from '../../../components/presence';
 import { customLocale } from '../../../utils/date-locale';
 
 interface Contact {
@@ -91,12 +90,6 @@ export const ContactsPopover: FC<ContactsPopoverProps> = (props) => {
                     </Link>
                   )}
                 />
-                {showOnline && (
-                  <Presence
-                    size="small"
-                    status="online"
-                  />
-                )}
                 {lastActivity && (
                   <Typography
                     color="text.secondary"

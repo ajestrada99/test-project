@@ -60,9 +60,6 @@ const VerticalLayoutRoot = styled('div')(
     display: 'flex',
     flex: '1 1 auto',
     maxWidth: '100%',
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: SIDE_NAV_WIDTH
-    }
   })
 );
 
@@ -87,20 +84,13 @@ export const VerticalLayout: FC<VerticalLayoutProps> = (props) => {
   return (
     <>
       <TopNav onMobileNavOpen={mobileNav.handleOpen} />
-      {lgUp && (
-        <SideNav
-          color={navColor}
-          sections={sections}
-        />
-      )}
-      {!lgUp && (
+     
         <MobileNav
           color={navColor}
           onClose={mobileNav.handleClose}
           open={mobileNav.isOpen}
           sections={sections}
         />
-      )}
       <VerticalLayoutRoot>
         <VerticalLayoutContainer>
           {children}

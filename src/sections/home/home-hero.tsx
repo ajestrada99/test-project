@@ -105,18 +105,7 @@ export const HomeHero: FC = () => {
             >
               Live Demo
             </Button>
-            <Button
-              color="inherit"
-              component={NextLink}
-              href={paths.components.index}
-              startIcon={(
-                <SvgIcon fontSize="small">
-                  <LayoutBottomIcon />
-                </SvgIcon>
-              )}
-            >
-              Components
-            </Button>
+            
           </Stack>
         </Box>
         <Box

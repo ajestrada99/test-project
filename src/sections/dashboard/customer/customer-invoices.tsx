@@ -15,7 +15,6 @@ import {
   TablePagination,
   TableRow
 } from '@mui/material';
-import { MoreMenu } from '../../../components/more-menu';
 import { Scrollbar } from '../../../components/scrollbar';
 import { SeverityPill } from '../../../components/severity-pill';
 import { paths } from '../../../paths';
@@ -30,10 +29,7 @@ export const CustomerInvoices: FC<CustomerInvoicesProps> = (props) => {
 
   return (
     <Card {...other}>
-      <CardHeader
-        action={<MoreMenu />}
-        title="Recent Invoices"
-      />
+     
       <Scrollbar>
         <Table sx={{ minWidth: 600 }}>
           <TableHead>
@@ -78,14 +74,6 @@ export const CustomerInvoices: FC<CustomerInvoicesProps> = (props) => {
                     </SeverityPill>
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton
-                      component={NextLink}
-                      href={paths.dashboard.invoices.details}
-                    >
-                      <SvgIcon>
-                        <ArrowRightIcon />
-                      </SvgIcon>
-                    </IconButton>
                   </TableCell>
                 </TableRow>
               );

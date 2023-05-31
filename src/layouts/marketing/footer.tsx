@@ -26,11 +26,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Browse Components',
-        path: paths.components.index
+        path: 'Browse Components'
       },
       {
         title: 'Documentation',
-        path: paths.docs.welcome
+        path: 'Browse Components'
       }
     ]
   },

@@ -69,7 +69,6 @@ const handlers: Record<ActionType, Handler> = {
   },
   SIGN_IN: (state: State, action: SignInAction): State => {
     const { user } = action.payload;
-
     return {
       ...state,
       isAuthenticated: true,

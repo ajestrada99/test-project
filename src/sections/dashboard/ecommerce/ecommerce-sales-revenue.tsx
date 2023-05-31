@@ -3,7 +3,6 @@ import type { ApexOptions } from 'apexcharts';
 import { format, subDays } from 'date-fns';
 import { Card, CardContent, CardHeader } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 const now = new Date();
 
@@ -141,14 +140,6 @@ export const EcommerceSalesRevenue: FC<EcommerceSalesRevenueProps> = (props) => 
   return (
     <Card>
       <CardHeader title="Sales Revenue" />
-      <CardContent sx={{ pt: 0 }}>
-        <Chart
-          height={320}
-          options={chartOptions}
-          series={chartSeries}
-          type="line"
-        />
-      </CardContent>
     </Card>
   );
 };

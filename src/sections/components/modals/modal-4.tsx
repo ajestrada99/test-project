@@ -11,7 +11,7 @@ import {
   Paper,
   Typography
 } from '@mui/material';
-import { Presence } from '../../../components/presence';
+// import { Presence } from '../../../components/presence';
 
 const now = new Date();
 
@@ -152,12 +152,12 @@ export const Modal4: FC = () => (
                     </Link>
                   )}
                 />
-                {showOnline && (
+                {/* {showOnline && (
                   <Presence
                     size="small"
                     status="online"
                   />
-                )}
+                )} */}
                 {lastActivity && (
                   <Typography
                     color="text.secondary"

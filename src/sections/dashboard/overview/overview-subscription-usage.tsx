@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import type { ApexOptions } from 'apexcharts';
 import { Box, Card, CardHeader, Tab, Tabs } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 type ChartSeries = {
   name: string;
@@ -125,12 +124,7 @@ export const OverviewSubscriptionUsage: FC<OverviewSubscriptionUsageProps> = (pr
         }
       />
       <Box sx={{ height: 336 }}>
-        <Chart
-          height={300}
-          options={chartOptions}
-          series={chartSeries}
-          type="bar"
-        />
+     
       </Box>
     </Card>
   );

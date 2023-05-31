@@ -21,9 +21,9 @@ import {
   Typography,
   Unstable_Grid2 as Grid
 } from '@mui/material';
-import { PlanIcon } from '../../../components/plan-icon';
-import { PropertyList } from '../../../components/property-list';
-import { PropertyListItem } from '../../../components/property-list-item';
+// import { PlanIcon } from '../../../components/plan-icon';
+// import { PropertyList } from '../../../components/property-list';
+// import { PropertyListItem } from '../../../components/property-list-item';
 
 interface Plan {
   id: string;
@@ -35,19 +35,19 @@ interface Plan {
 const plans: Plan[] = [
   {
     id: 'startup',
-    icon: <PlanIcon variant="startup" />,
+    icon: <></> ,
     name: 'Startup',
     price: 0
   },
   {
     id: 'standard',
-    icon: <PlanIcon variant="standard" />,
+    icon: <></>,
     name: 'Standard',
     price: 4.99
   },
   {
     id: 'business',
-    icon: <PlanIcon variant="business" />,
+    icon: <></>,
     name: 'Business',
     price: 29.99
   }
@@ -196,7 +196,7 @@ export const AccountBillingSettings: FC<AccountBillingSettingsProps> = (props) =
               mt: 3
             }}
           >
-            <PropertyList>
+            {/* <PropertyList>
               <PropertyListItem
                 align="horizontal"
                 divider
@@ -220,7 +220,7 @@ export const AccountBillingSettings: FC<AccountBillingSettingsProps> = (props) =
                 label="Zip / Postal code"
                 value="667123"
               />
-            </PropertyList>
+            </PropertyList> */}
           </Box>
           <Typography
             color="text.secondary"

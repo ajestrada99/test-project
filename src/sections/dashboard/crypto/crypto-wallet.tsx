@@ -8,7 +8,6 @@ import DotsHorizontalIcon from '@untitled-ui/icons-react/build/esm/DotsHorizonta
 import type { SxProps } from '@mui/system';
 import { Box, Card, CardHeader, IconButton, Stack, SvgIcon, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 const logoMap: Record<string, string> = {
   BTC: '/assets/logos/logo-bitcoin.svg',
@@ -128,12 +127,6 @@ export const CryptoWallet: FC<CryptoWalletProps> = (props) => {
             {currency}
           </Typography>
         )}
-      />
-      <Chart
-        height={140}
-        options={chartOptions}
-        series={chartSeries}
-        type="area"
       />
       <Box
         sx={{

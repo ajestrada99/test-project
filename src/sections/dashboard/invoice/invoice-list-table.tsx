@@ -20,7 +20,6 @@ import {
 import { Scrollbar } from '../../../components/scrollbar';
 import { paths } from '../../../paths';
 import type { Invoice, InvoiceStatus } from '../../../types/invoice';
-import { getInitials } from '../../../utils/get-initials';
 import type { SeverityPillColor } from '../../../components/severity-pill';
 import { SeverityPill } from '../../../components/severity-pill';
 
@@ -70,41 +69,7 @@ const InvoiceRow: FC<InvoiceRowProps> = (props) => {
       {...other}
     >
       <TableCell width="25%">
-        <Stack
-          alignItems="center"
-          direction="row"
-          spacing={2}
-          component={NextLink}
-          href={paths.dashboard.invoices.details}
-          sx={{
-            display: 'inline-flex',
-            textDecoration: 'none',
-            whiteSpace: 'nowrap'
-          }}
-        >
-          <Avatar
-            sx={{
-              height: 42,
-              width: 42
-            }}
-          >
-            {getInitials(invoice.customer.name)}
-          </Avatar>
-          <div>
-            <Typography
-              color="text.primary"
-              variant="subtitle2"
-            >
-              {invoice.number}
-            </Typography>
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              {invoice.customer.name}
-            </Typography>
-          </div>
-        </Stack>
+        
       </TableCell>
       <TableCell>
         <Typography variant="subtitle2">
@@ -140,14 +105,7 @@ const InvoiceRow: FC<InvoiceRowProps> = (props) => {
         </SeverityPill>
       </TableCell>
       <TableCell align="right">
-        <IconButton
-          component={NextLink}
-          href={paths.dashboard.invoices.details}
-        >
-          <SvgIcon>
-            <ArrowRightIcon />
-          </SvgIcon>
-        </IconButton>
+        
       </TableCell>
     </TableRow>
   );

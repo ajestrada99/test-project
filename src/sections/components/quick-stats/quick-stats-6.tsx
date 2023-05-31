@@ -17,7 +17,7 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 type ChartSeries = number[];
 
@@ -96,13 +96,13 @@ export const QuickStats6: FC = () => {
                 direction="row"
                 spacing={2}
               >
-                <Chart
+                {/* <Chart
                   height={160}
                   options={chartOptions}
                   series={chartSeries}
                   type="radialBar"
                   width={160}
-                />
+                /> */}
                 <Box sx={{ flexGrow: 1 }}>
                   <Stack spacing={1}>
                     <Typography variant="h4">
@@ -152,13 +152,13 @@ export const QuickStats6: FC = () => {
                 direction="row"
                 spacing={2}
               >
-                <Chart
+                {/* <Chart
                   height={160}
                   options={chartOptions}
                   series={chartSeries}
                   type="radialBar"
                   width={160}
-                />
+                /> */}
                 <Box sx={{ flexGrow: 1 }}>
                   <Stack spacing={1}>
                     <Typography variant="h4">

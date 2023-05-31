@@ -15,7 +15,6 @@ interface IssuerGuardProps {
 export const IssuerGuard: FC<IssuerGuardProps> = (props) => {
   const { children, issuer: expectedIssuer } = props;
   const { issuer } = useAuth();
-
   if (expectedIssuer !== issuer) {
     return (
       <Error

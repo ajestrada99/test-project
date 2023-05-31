@@ -18,9 +18,6 @@ import {
   Typography,
   Unstable_Grid2 as Grid
 } from '@mui/material';
-import type { File } from '../../../components/file-dropzone';
-import { FileDropzone } from '../../../components/file-dropzone';
-import { QuillEditor } from '../../../components/quill-editor';
 import { paths } from '../../../paths';
 
 interface CategoryOption {
@@ -100,7 +97,6 @@ export const ProductCreateForm: FC = (props) => {
       try {
         // NOTE: Make API request
         toast.success('Product created');
-        router.push(paths.dashboard.products.index);
       } catch (err) {
         console.error(err);
         toast.error('Something went wrong!');
@@ -122,9 +118,7 @@ export const ProductCreateForm: FC = (props) => {
 
   const handleFileRemove = useCallback(
     (file: File): void => {
-      setFiles((prevFiles) => {
-        return prevFiles.filter((_file) => _file.path !== file.path);
-      });
+      
     },
     []
   );
@@ -179,14 +173,7 @@ export const ProductCreateForm: FC = (props) => {
                     >
                       Description
                     </Typography>
-                    <QuillEditor
-                      onChange={(value: string): void => {
-                        formik.setFieldValue('description', value);
-                      }}
-                      placeholder="Write something"
-                      sx={{ height: 400 }}
-                      value={formik.values.description}
-                    />
+                   
                     {!!(formik.touched.description && formik.errors.description) && (
                       <Box sx={{ mt: 2 }}>
                         <FormHelperText error>
@@ -226,14 +213,7 @@ export const ProductCreateForm: FC = (props) => {
                 xs={12}
                 md={8}
               >
-                <FileDropzone
-                  accept={{ 'image/*': [] }}
-                  caption="(SVG, JPG, PNG, or gif maximum 900x400)"
-                  files={files}
-                  onDrop={handleFilesDrop}
-                  onRemove={handleFileRemove}
-                  onRemoveAll={handleFilesRemoveAll}
-                />
+                
               </Grid>
             </Grid>
           </CardContent>

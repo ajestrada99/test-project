@@ -3,7 +3,6 @@ import { FormEvent, useCallback, useMemo, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import SearchMdIcon from '@untitled-ui/icons-react/build/esm/SearchMd';
 import { Box, Chip, Divider, Input, Stack, SvgIcon, Typography } from '@mui/material';
-import { MultiSelect } from '../../../components/multi-select';
 import { useUpdateEffect } from '../../../hooks/use-update-effect';
 
 interface Filters {
@@ -394,24 +393,6 @@ export const ProductListSearch: FC<ProductListSearchProps> = (props) => {
         spacing={1}
         sx={{ p: 1 }}
       >
-        <MultiSelect
-          label="Category"
-          onChange={handleCategoryChange}
-          options={categoryOptions}
-          value={categoryValues}
-        />
-        <MultiSelect
-          label="Status"
-          onChange={handleStatusChange}
-          options={statusOptions}
-          value={statusValues}
-        />
-        <MultiSelect
-          label="Stock"
-          onChange={handleStockChange}
-          options={stockOptions}
-          value={stockValues}
-        />
       </Stack>
     </div>
   );

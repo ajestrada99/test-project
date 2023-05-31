@@ -46,24 +46,24 @@ export const PostCard: FC<PostCardProps> = (props) => {
 
   return (
     <Card {...other}>
-      <CardMedia
+      {/* <CardMedia
         component={NextLink}
         href={paths.dashboard.blog.postDetails}
         image={cover}
         sx={{ height: 280 }}
-      />
+      /> */}
       <CardContent>
         <Box sx={{ mb: 2 }}>
           <Chip label={category} />
         </Box>
-        <Link
+        {/* <Link
           color="text.primary"
           component={NextLink}
           href={paths.dashboard.blog.postDetails}
           variant="h5"
         >
           {title}
-        </Link>
+        </Link> */}
         <Typography
           color="text.secondary"
           sx={{

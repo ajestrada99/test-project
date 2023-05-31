@@ -20,7 +20,7 @@ const renderItems = ({
   depth?: number;
   items: Item[];
   pathname?: string | null;
-}): JSX.Element[] => items.reduce(
+}): JSX.Element[] => items?.reduce(
   (acc: JSX.Element[], item) => reduceChildRoutes({
     acc,
     depth,

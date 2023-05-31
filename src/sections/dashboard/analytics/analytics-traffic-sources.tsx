@@ -3,7 +3,7 @@ import type { ApexOptions } from 'apexcharts';
 import PropTypes from 'prop-types';
 import { Card, CardContent, CardHeader } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
+// import { Chart } from '../../../components/chart';
 
 const useChartOptions = (): ApexOptions => {
   const theme = useTheme();
@@ -104,12 +104,12 @@ export const AnalyticsTrafficSources: FC<AnalyticsTrafficSourcesProps> = (props)
         title="Traffic Sources"
       />
       <CardContent sx={{ pt: 0 }}>
-        <Chart
+        {/* <Chart
           height={400}
           options={chartOptions}
           series={chartSeries}
           type="bar"
-        />
+        /> */}
       </CardContent>
     </Card>
   );

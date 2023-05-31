@@ -27,10 +27,9 @@ const useParticipants = (threadKey: string): Participant[] => {
 
       } catch (err) {
         console.error(err);
-        router.push(paths.dashboard.chat);
       }
     },
-    [router, threadKey]
+    [ threadKey]
   );
 
   useEffect(
@@ -47,10 +46,10 @@ const useParticipants = (threadKey: string): Participant[] => {
 const useThread = (threadKey: string): Thread | undefined => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const thread = useSelector((state) => {
-    const { threads, currentThreadId } = state.chat;
+  const thread =useSelector<any>((state) => {
+    // const { threads, currentThreadId } = state;
 
-    return threads.byId[currentThreadId as string];
+    // return threads.byId[currentThreadId as string];
   });
 
   const getThread = useCallback(
@@ -67,7 +66,6 @@ const useThread = (threadKey: string): Thread | undefined => {
         })) as unknown as string | undefined;
       } catch (err) {
         console.error(err);
-        router.push(paths.dashboard.chat);
         return;
       }
 
@@ -86,7 +84,7 @@ const useThread = (threadKey: string): Thread | undefined => {
         }));
       }
     },
-    [router, dispatch, threadKey]
+    [dispatch, threadKey]
   );
 
   useEffect(

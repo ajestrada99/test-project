@@ -71,6 +71,8 @@ interface HorizontalLayoutProps {
   sections?: Section[];
 }
 
+
+
 export const HorizontalLayout: FC<HorizontalLayoutProps> = (props) => {
   const { children, navColor, sections } = props;
   const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));

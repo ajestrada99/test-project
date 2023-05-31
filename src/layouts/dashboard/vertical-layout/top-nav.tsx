@@ -11,7 +11,7 @@ import { NotificationsButton } from '../notifications-button';
 import { SearchButton } from '../search-button';
 
 const TOP_NAV_HEIGHT: number = 64;
-const SIDE_NAV_WIDTH: number = 280;
+const SIDE_NAV_WIDTH: number = 20;
 
 interface TopNavProps {
   onMobileNavOpen?: () => void;
@@ -20,20 +20,20 @@ interface TopNavProps {
 export const TopNav: FC<TopNavProps> = (props) => {
   const { onMobileNavOpen, ...other } = props;
   const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
-
+  /// diseño del drawer
   return (
     <Box
       component="header"
       sx={{
         backdropFilter: 'blur(6px)',
-        backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
+        backgroundColor:'rgb(235 254 231 / 80%)',
         position: 'sticky',
         left: {
           lg: `${SIDE_NAV_WIDTH}px`
         },
         top: 0,
         width: {
-          lg: `calc(100% - ${SIDE_NAV_WIDTH}px)`
+          lg: `calc(100% - 0px)`
         },
         zIndex: (theme) => theme.zIndex.appBar
       }}
@@ -52,25 +52,21 @@ export const TopNav: FC<TopNavProps> = (props) => {
         <Stack
           alignItems="center"
           direction="row"
-          spacing={2}
         >
-          {!lgUp && (
             <IconButton onClick={onMobileNavOpen}>
               <SvgIcon>
                 <Menu01Icon />
               </SvgIcon>
             </IconButton>
-          )}
-          <SearchButton />
+          {/* <SearchButton /> */}
         </Stack>
         <Stack
           alignItems="center"
           direction="row"
-          spacing={2}
         >
-          <LanguageSwitch />
+          {/* <LanguageSwitch />
           <NotificationsButton />
-          <ContactsButton />
+          <ContactsButton /> */}
           <AccountButton />
         </Stack>
       </Stack>

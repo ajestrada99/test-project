@@ -10,12 +10,12 @@ import {
   Typography,
   Unstable_Grid2 as Grid
 } from '@mui/material';
-import { LogoAccenture } from '../../components/companies-logos/logo-accenture';
-import { LogoAtt } from '../../components/companies-logos/logo-att';
-import { LogoAws } from '../../components/companies-logos/logo-aws';
-import { LogoBolt } from '../../components/companies-logos/logo-bolt';
-import { LogoSamsung } from '../../components/companies-logos/logo-samsung';
-import { LogoVisma } from '../../components/companies-logos/logo-visma';
+import { LogoAccenture } from '../../oldVersion/companies-logos/logo-accenture';
+import { LogoAtt } from '../../oldVersion/companies-logos/logo-att';
+import { LogoAws } from '../../oldVersion/companies-logos/logo-aws';
+import { LogoBolt } from '../../oldVersion/companies-logos/logo-bolt';
+import { LogoSamsung } from '../../oldVersion/companies-logos/logo-samsung';
+import { LogoVisma } from '../../oldVersion/companies-logos/logo-visma';
 
 const QuotesIcon: FC = () => (
   <svg

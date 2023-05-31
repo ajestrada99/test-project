@@ -10,10 +10,14 @@ export const InvoiceListContainer = styled(
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(3),
     paddingTop: theme.spacing(8),
+    display:'inline-grid',
     paddingBottom: theme.spacing(8),
     zIndex: 1,
+    [theme.breakpoints.up('xs')]: {
+      marginLeft: -320
+    },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: -380
+      marginLeft: -450
     },
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
@@ -21,6 +25,9 @@ export const InvoiceListContainer = styled(
     }),
     ...(open && {
       [theme.breakpoints.up('lg')]: {
+        marginLeft: 0
+      },
+      [theme.breakpoints.up('xs')]: {
         marginLeft: 0
       },
       transition: theme.transitions.create('margin', {

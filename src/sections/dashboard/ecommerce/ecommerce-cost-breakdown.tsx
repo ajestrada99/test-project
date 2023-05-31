@@ -16,7 +16,6 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 const useChartOptions = (labels: string[]): ApexOptions => {
   const theme = useTheme();
@@ -85,12 +84,7 @@ export const EcommerceCostBreakdown: FC<EcommerceCostBreakdownProps> = (props) =
         subheader="Based on selected period"
       />
       <CardContent>
-        <Chart
-          height={240}
-          options={chartOptions}
-          series={chartSeries}
-          type="donut"
-        />
+      
         <Table>
           <TableHead
             sx={{

@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import PropTypes from 'prop-types';
-import { FileIcon } from '../../../components/file-icon';
 import type { ItemType } from '../../../types/file-manager';
 
 interface ItemIconProps {
@@ -13,7 +12,7 @@ export const ItemIcon: FC<ItemIconProps> = (props) => {
 
   return type === 'folder'
     ? <img src="/assets/icons/icon-folder.svg" />
-    : <FileIcon extension={extension} />;
+    : <> </>;
 };
 
 ItemIcon.propTypes = {

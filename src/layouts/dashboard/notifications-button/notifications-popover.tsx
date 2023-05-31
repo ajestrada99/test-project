@@ -20,7 +20,7 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-import { Scrollbar } from '../../../components/scrollbar';
+import { Scrollbar } from '@/oldVersion/scrollbar';
 import type { Notification } from './notifications';
 
 const renderContent = (notification: Notification): JSX.Element | null => {

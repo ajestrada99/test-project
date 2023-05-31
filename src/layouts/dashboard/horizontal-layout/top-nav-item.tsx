@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ChevronDownIcon from '@untitled-ui/icons-react/build/esm/ChevronDown';
 import ChevronRightIcon from '@untitled-ui/icons-react/build/esm/ChevronRight';
 import { Box, ButtonBase, ListItemButton, ListItemText, SvgIcon } from '@mui/material';
-import { Dropdown, DropdownMenu, DropdownTrigger } from '../../../components/dropdown';
+import { Dropdown, DropdownMenu, DropdownTrigger } from '@/oldVersion/dropdown';
 
 interface Item {
   disabled?: boolean;

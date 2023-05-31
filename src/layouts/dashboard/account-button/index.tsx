@@ -44,9 +44,9 @@ export const AccountButton: FC = () => {
         <Avatar
           sx={{
             height: 32,
-            width: 32
-          }}
-          src={user.avatar}
+            width: 32,
+            // background:'green'
+          }} 
         >
           <SvgIcon>
             <User01Icon />

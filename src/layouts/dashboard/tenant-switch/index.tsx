@@ -1,9 +1,8 @@
 import type { FC } from 'react';
 import { useCallback, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import ChevronDownIcon from '@untitled-ui/icons-react/build/esm/ChevronDown';
 import { SxProps } from '@mui/system';
-import { Box, IconButton, Stack, SvgIcon, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { TenantPopover } from './tenant-popover';
 
 const tenants: string[] = ['Devias', 'Acme Corp'];
@@ -50,31 +49,16 @@ export const TenantSwitch: FC<TenantSwitchProps> = (props) => {
             color="inherit"
             variant="h6"
           >
-            Devias
+            Foragro
           </Typography>
           <Typography
             color="neutral.400"
             variant="body2"
           >
-            Production
+            version 1.1.5
           </Typography>
         </Box>
-        <IconButton
-          onClick={handlePopoverOpen}
-          ref={anchorRef}
-        >
-          <SvgIcon sx={{ fontSize: 16 }}>
-            <ChevronDownIcon />
-          </SvgIcon>
-        </IconButton>
       </Stack>
-      <TenantPopover
-        anchorEl={anchorRef.current}
-        onChange={handleTenantChange}
-        onClose={handlePopoverClose}
-        open={openPopover}
-        tenants={tenants}
-      />
     </>
   );
 };

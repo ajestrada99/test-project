@@ -70,13 +70,9 @@ export const MailSidebar: FC<MailSidebarProps> = (props) => {
         onClose?.();
       }
 
-      const href = label.id !== 'inbox'
-        ? paths.dashboard.mail + `?label=${label.id}`
-        : paths.dashboard.mail;
-
-      router.push(href);
+      
     },
-    [router, mdUp, onClose]
+    [ mdUp, onClose]
   );
 
   // Maybe use memo

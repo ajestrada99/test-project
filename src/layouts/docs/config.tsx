@@ -18,58 +18,58 @@ export const sections: Section[] = [
   {
     subheader: 'Overview',
     items: [
-      {
-        title: 'Welcome',
-        path: paths.docs.welcome
-      },
-      {
-        title: 'Getting Started',
-        path: paths.docs.gettingStarted
-      },
-      {
-        title: 'Dependencies',
-        path: paths.docs.dependencies
-      },
-      {
-        title: 'Environment Variables',
-        path: paths.docs.environmentVariables
-      },
-      {
-        title: 'Deployment',
-        path: paths.docs.deployment
-      },
-      {
-        title: 'Routing',
-        path: paths.docs.routing
-      },
-      {
-        title: 'Theming',
-        path: paths.docs.theming
-      },
-      {
-        title: 'Redux',
-        path: paths.docs.redux
-      },
-      {
-        title: 'Server Calls',
-        path: paths.docs.serverCalls
-      },
-      {
-        title: 'Settings',
-        path: paths.docs.settings
-      },
-      {
-        title: 'RTL',
-        path: paths.docs.rtl
-      },
-      {
-        title: 'Mapbox',
-        path: paths.docs.mapbox
-      },
-      {
-        title: 'Internationalization',
-        path: paths.docs.internationalization
-      }
+       {
+         title: 'Welcome',
+         path: ''
+       },
+       {
+         title: 'Getting Started',
+         path: ''
+       },
+       {
+         title: 'Dependencies',
+         path: ''
+       },
+       {
+         title: 'Environment Variables',
+         path: ''
+       },
+       {
+         title: 'Deployment',
+         path: ''
+       },
+       {
+         title: 'Routing',
+         path: ''
+       },
+       {
+         title: 'Theming',
+         path:''
+       },
+       {
+         title: 'Redux',
+         path:''
+       },
+       {
+         title: 'Server Calls',
+         path: ''
+       },
+       {
+         title: 'Settings',
+         path: ''
+       },
+       {
+         title: 'RTL',
+         path: ''
+       },
+       {
+         title: 'Mapbox',
+         path: ''
+       },
+       {
+         title: 'Internationalization',
+         path: ''
+       }
     ]
   },
   {
@@ -77,19 +77,19 @@ export const sections: Section[] = [
     items: [
       {
         title: 'Amplify',
-        path: paths.docs.auth.amplify
+        path: ''
       },
       {
         title: 'Auth0',
-        path: paths.docs.auth.auth0
+        path: ''
       },
       {
         title: 'Firebase',
-        path: paths.docs.auth.firebase
+        path: ''
       },
       {
         title: 'JWT',
-        path: paths.docs.auth.jwt
+        path: ''
       }
     ]
   },
@@ -98,15 +98,15 @@ export const sections: Section[] = [
     items: [
       {
         title: 'Auth Guard',
-        path: paths.docs.guards.auth
+        path: ''
       },
       {
         title: 'Guest Guard',
-        path: paths.docs.guards.guest
+        path: ''
       },
       {
         title: 'Role Based Guard',
-        path: paths.docs.guards.roleBased
+        path: ''
       }
     ]
   },
@@ -115,15 +115,15 @@ export const sections: Section[] = [
     items: [
       {
         title: 'Introduction',
-        path: paths.docs.analytics.introduction
+        path: ''
       },
       {
         title: 'Configuration',
-        path: paths.docs.analytics.configuration
+        path: ''
       },
       {
         title: 'Event Tracking',
-        path: paths.docs.analytics.eventTracking
+        path: ''
       }
     ]
   },
@@ -132,15 +132,15 @@ export const sections: Section[] = [
     items: [
       {
         title: 'Changelog',
-        path: paths.docs.changelog
+        path:''
       },
       {
         title: 'Contact',
-        path: paths.docs.contact
+        path: ''
       },
       {
         title: 'Further Support',
-        path: paths.docs.furtherSupport
+        path: ''
       }
     ]
   }

@@ -17,7 +17,7 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { Tip } from '../../../components/tip';
+// import { Tip } from '../../../components/tip';
 import { wait } from '../../../utils/wait';
 
 type Article = {
@@ -108,7 +108,7 @@ export const SearchDialog: FC<SearchDialogProps> = (props) => {
         </IconButton>
       </Stack>
       <DialogContent>
-        <Tip message="Search by entering a keyword and pressing Enter" />
+        {/* <Tip message="Search by entering a keyword and pressing Enter" /> */}
         <Box
           component="form"
           onSubmit={handleSubmit}

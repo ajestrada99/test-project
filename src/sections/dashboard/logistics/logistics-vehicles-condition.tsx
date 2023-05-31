@@ -4,7 +4,6 @@ import type { ApexOptions } from 'apexcharts';
 import type { Theme } from '@mui/material';
 import { Box, Card, CardHeader, Typography, Unstable_Grid2 as Grid } from '@mui/material';
 import { alpha, useTheme } from '@mui/material/styles';
-import { Chart } from '../../../components/chart';
 
 type Category = {
   id: 'excellent' | 'good' | 'bad';
@@ -137,12 +136,7 @@ export const LogisticsVehiclesCondition: FC<LogisticsVehiclesConditionProps> = (
                   >
                     {category.title}
                   </Typography>
-                  <Chart
-                    height={200}
-                    options={chartOptions}
-                    series={chartSeries}
-                    type="radialBar"
-                  />
+                  
                   <Typography variant="h6">
                     {amount}
                   </Typography>

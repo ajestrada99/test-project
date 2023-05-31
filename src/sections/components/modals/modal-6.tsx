@@ -48,15 +48,15 @@ export const Modal6: FC = () => (
               <User01Icon />
             </SvgIcon>
           </ListItemIcon>
-          <ListItemText
+          {/* <ListItemText
             primary={(
               <Typography variant="subtitle2">
                 Profile
               </Typography>
             )}
-          />
+          /> */}
         </MenuItem>
-        <MenuItem>
+        {/* <MenuItem>
           <ListItemIcon>
             <SvgIcon>
               <Settings01Icon />
@@ -69,7 +69,7 @@ export const Modal6: FC = () => (
               </Typography>
             )}
           />
-        </MenuItem>
+        </MenuItem> */}
       </Box>
       <Box sx={{ p: 2 }}>
         <Button

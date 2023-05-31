@@ -15,7 +15,7 @@ import {
   SvgIcon,
   Typography
 } from '@mui/material';
-import { Tip } from '../../../components/tip';
+// import { Tip } from '../../../components/tip';
 import type { Contact } from '../../../types/chat';
 
 interface ChatSidebarSearchProps {
@@ -77,7 +77,7 @@ export const ChatSidebarSearch = forwardRef<HTMLDivElement, ChatSidebarSearchPro
         />
         {showTip && (
           <Box sx={{ py: 2 }}>
-            <Tip message="Enter a contact name" />
+            {/* <Tip message="Enter a contact name" /> */}
           </Box>
         )}
         {showResults && (

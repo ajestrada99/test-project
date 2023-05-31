@@ -1,26 +1,20 @@
 import type { FC } from 'react';
 import { useCallback } from 'react';
-import NextLink from 'next/link';
+import Router from 'next/router';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 import toast from 'react-hot-toast';
-import CreditCard01Icon from '@untitled-ui/icons-react/build/esm/CreditCard01';
-import Settings04Icon from '@untitled-ui/icons-react/build/esm/Settings04';
-import User03Icon from '@untitled-ui/icons-react/build/esm/User03';
 import {
   Box,
   Button,
   Divider,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
   Popover,
-  SvgIcon,
   Typography
 } from '@mui/material';
-import { useAuth } from '../../../hooks/use-auth';
-import { paths } from '../../../paths';
-import { Issuer } from '../../../utils/auth';
+import { useAuth } from '@/hooks/use-auth';
+import { paths } from '@/paths';
+import { Issuer } from '@/utils/auth';
+import { useMsal } from "@azure/msal-react";
 
 interface AccountPopoverProps {
   anchorEl: null | Element;
@@ -32,7 +26,7 @@ export const AccountPopover: FC<AccountPopoverProps> = (props) => {
   const { anchorEl, onClose, open, ...other } = props;
   const router = useRouter();
   const auth = useAuth();
-
+  const { accounts , instance} = useMsal();
   const handleLogout = useCallback(
     async (): Promise<void> => {
       try {
@@ -88,84 +82,17 @@ export const AccountPopover: FC<AccountPopoverProps> = (props) => {
     >
       <Box sx={{ p: 2 }}>
         <Typography variant="body1">
-          Anika Visser
+       { accounts && accounts[0]?.name?.split(' ')[0]} { ' ' }
+       { accounts && accounts[0]?.name?.split(' ')[2]}
         </Typography>
         <Typography
           color="text.secondary"
           variant="body2"
         >
-          demo@devias.io
+          { accounts && accounts[0]?.username}
         </Typography>
       </Box>
       <Divider />
-      <Box sx={{ p: 1 }}>
-        <ListItemButton
-          component={NextLink}
-          href={paths.dashboard.social.profile}
-          sx={{
-            borderRadius: 1,
-            px: 1,
-            py: 0.5
-          }}
-        >
-          <ListItemIcon>
-            <SvgIcon fontSize="small">
-              <User03Icon />
-            </SvgIcon>
-          </ListItemIcon>
-          <ListItemText
-            primary={(
-              <Typography variant="body1">
-                Profile
-              </Typography>
-            )}
-          />
-        </ListItemButton>
-        <ListItemButton
-          component={NextLink}
-          href={paths.dashboard.account}
-          sx={{
-            borderRadius: 1,
-            px: 1,
-            py: 0.5
-          }}
-        >
-          <ListItemIcon>
-            <SvgIcon fontSize="small">
-              <Settings04Icon />
-            </SvgIcon>
-          </ListItemIcon>
-          <ListItemText
-            primary={(
-              <Typography variant="body1">
-                Settings
-              </Typography>
-            )}
-          />
-        </ListItemButton>
-        <ListItemButton
-          component={NextLink}
-          href={paths.dashboard.index}
-          sx={{
-            borderRadius: 1,
-            px: 1,
-            py: 0.5
-          }}
-        >
-          <ListItemIcon>
-            <SvgIcon fontSize="small">
-              <CreditCard01Icon />
-            </SvgIcon>
-          </ListItemIcon>
-          <ListItemText
-            primary={(
-              <Typography variant="body1">
-                Billing
-              </Typography>
-            )}
-          />
-        </ListItemButton>
-      </Box>
       <Divider sx={{ my: '0 !important' }} />
       <Box
         sx={{
@@ -176,10 +103,18 @@ export const AccountPopover: FC<AccountPopoverProps> = (props) => {
       >
         <Button
           color="inherit"
-          onClick={handleLogout}
+          onClick={()=> {
+            handleLogout(), 
+            instance.logoutPopup().then(()=> {
+              localStorage.removeItem('token');
+              localStorage.removeItem('auth');
+              localStorage.clear();
+              Router.push('/')
+            })
+          }}
           size="small"
         >
-          Logout
+         Cerrar sesión
         </Button>
       </Box>
     </Popover>

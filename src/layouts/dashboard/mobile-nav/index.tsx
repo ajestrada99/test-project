@@ -1,14 +1,11 @@
 import type { FC } from 'react';
 import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-import NextLink from 'next/link';
 import PropTypes from 'prop-types';
-import File04Icon from '@untitled-ui/icons-react/build/esm/File04';
 import { Box, Button, Drawer, Stack, SvgIcon, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Logo } from '../../../components/logo';
-import { Scrollbar } from '../../../components/scrollbar';
-import { paths } from '../../../paths';
+import { Scrollbar } from '@/oldVersion/scrollbar';
 import type { NavColor } from '../../../types/settings';
 import type { Section } from '../config';
 import { TenantSwitch } from '../tenant-switch';
@@ -22,8 +19,6 @@ const useCssVars = (color: NavColor): Record<string, string> => {
   return useMemo(
     (): Record<string, string> => {
       switch (color) {
-        // Blend-in and discreet have no difference on mobile because
-        // there's a backdrop and differences are not visible
         case 'blend-in':
         case 'discreet':
           if (theme.palette.mode === 'dark') {
@@ -118,7 +113,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
   const { color = 'evident', open, onClose, sections = [] } = props;
   const pathname = usePathname();
   const cssVars = useCssVars(color);
-
+  const date = new Date(); 
   return (
     <Drawer
       anchor="left"
@@ -153,8 +148,6 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
             sx={{ p: 3 }}
           >
             <Box
-              component={NextLink}
-              href={paths.index}
               sx={{
                 borderColor: 'var(--nav-logo-border)',
                 borderRadius: 1,
@@ -190,30 +183,11 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
           <Box sx={{ p: 3 }}>
             <Typography
               color="neutral.400"
-              variant="subtitle1"
-            >
-              Need help?
-            </Typography>
-            <Typography
-              color="neutral.400"
               sx={{ mb: 2 }}
               variant="body2"
             >
-              Please check our docs.
+            {`Copyright © ${date.getFullYear()} Foragro`}
             </Typography>
-            <Button
-              component={NextLink}
-              fullWidth
-              href={paths.docs.welcome}
-              startIcon={(
-                <SvgIcon>
-                  <File04Icon />
-                </SvgIcon>
-              )}
-              variant="contained"
-            >
-              Documentation
-            </Button>
           </Box>
         </Stack>
       </Scrollbar>

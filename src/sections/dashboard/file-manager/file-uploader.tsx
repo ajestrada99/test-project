@@ -2,7 +2,6 @@ import type { FC } from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Dialog, DialogContent, IconButton, Stack, SvgIcon, Typography } from '@mui/material';
-import { File, FileDropzone } from '../../../components/file-dropzone';
 import XIcon from '@untitled-ui/icons-react/build/esm/X';
 
 interface FileUploaderProps {
@@ -32,9 +31,7 @@ export const FileUploader: FC<FileUploaderProps> = (props) => {
 
   const handleRemove = useCallback(
     (file: File): void => {
-      setFiles((prevFiles) => {
-        return prevFiles.filter((_file) => _file.path !== file.path);
-      });
+     
     },
     []
   );
@@ -76,15 +73,6 @@ export const FileUploader: FC<FileUploaderProps> = (props) => {
         </IconButton>
       </Stack>
       <DialogContent>
-        <FileDropzone
-          accept={{ '*/*': [] }}
-          caption="Max file size is 3 MB"
-          files={files}
-          onDrop={handleDrop}
-          onRemove={handleRemove}
-          onRemoveAll={handleRemoveAll}
-          onUpload={onClose}
-        />
       </DialogContent>
     </Dialog>
   );

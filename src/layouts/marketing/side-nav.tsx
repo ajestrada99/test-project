@@ -23,7 +23,7 @@ interface Item {
 const items: Item[] = [
   {
     title: 'Components',
-    path: paths.components.index
+    path:'Browse Components'
   },
   {
     title: 'Pages',
@@ -41,11 +41,11 @@ const items: Item[] = [
           },
           {
             title: 'Logistics',
-            path: paths.dashboard.logistics.index
+            path:'Browse Components'
           },
           {
             title: 'File Manager',
-            path: paths.dashboard.fileManager
+            path: 'Browse Components'
           },
           {
             title: 'Academy',
@@ -58,19 +58,19 @@ const items: Item[] = [
         items: [
           {
             title: 'Blog',
-            path: paths.dashboard.blog.index
+            path: 'Browse Components'
           },
           {
             title: 'Pricing',
-            path: paths.pricing
+            path:'Browse Components'
           },
           {
             title: 'Contact',
-            path: paths.contact
+            path: 'Browse Components'
           },
           {
             title: 'Checkout',
-            path: paths.checkout
+            path: 'Browse Components'
           },
           {
             title: 'Error',
@@ -82,7 +82,7 @@ const items: Item[] = [
   },
   {
     title: 'Docs',
-    path: paths.docs.welcome
+    path: 'Browse Components'
   }
 ];
 

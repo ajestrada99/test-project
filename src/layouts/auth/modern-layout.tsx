@@ -3,12 +3,12 @@ import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 import { Box, Stack, Typography } from '@mui/material';
 import { Logo } from '../../components/logo';
-import { LogoSamsung } from '../../components/companies-logos/logo-samsung';
-import { LogoVisma } from '../../components/companies-logos/logo-visma';
-import { LogoBolt } from '../../components/companies-logos/logo-bolt';
-import { LogoAws } from '../../components/companies-logos/logo-aws';
-import { LogoAccenture } from '../../components/companies-logos/logo-accenture';
-import { LogoAtt } from '../../components/companies-logos/logo-att';
+import { LogoSamsung } from '../../oldVersion/companies-logos/logo-samsung';
+import { LogoVisma } from '../../oldVersion/companies-logos/logo-visma';
+import { LogoBolt } from '../../oldVersion/companies-logos/logo-bolt';
+import { LogoAws } from '../../oldVersion/companies-logos/logo-aws';
+import { LogoAccenture } from '../../oldVersion/companies-logos/logo-accenture';
+import { LogoAtt } from '../../oldVersion/companies-logos/logo-att';
 import { paths } from '../../paths';
 
 interface LayoutProps {

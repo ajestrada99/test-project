@@ -238,19 +238,7 @@ export const SideNav: FC<SideNavProps> = (props) => {
             >
               Please check our docs.
             </Typography>
-            <Button
-              component={NextLink}
-              fullWidth
-              href={paths.docs.welcome}
-              startIcon={(
-                <SvgIcon>
-                  <File04Icon />
-                </SvgIcon>
-              )}
-              variant="contained"
-            >
-              Documentation
-            </Button>
+           
           </Box>
         </Stack>
       </Scrollbar>

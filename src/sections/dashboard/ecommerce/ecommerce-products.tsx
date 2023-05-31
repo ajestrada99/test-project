@@ -17,7 +17,6 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
-import { MoreMenu } from '../../../components/more-menu';
 import { Scrollbar } from '../../../components/scrollbar';
 
 interface Product {
@@ -37,10 +36,7 @@ export const EcommerceProducts: FC<EcommerceProductsProps> = (props) => {
 
   return (
     <Card>
-      <CardHeader
-        action={<MoreMenu />}
-        title="Top Selling Products"
-      />
+   
       <Scrollbar>
         <Table sx={{ minWidth: 300 }}>
           <TableBody>

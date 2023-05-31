@@ -44,22 +44,10 @@ export const CourseSearch: FC = () => {
           </TextField>
         </Box>
         <div>
-          <DatePicker
-            inputFormat="dd/MM/yyyy"
-            label="From"
-            onChange={() => {}}
-            renderInput={(inputProps) => <TextField {...inputProps} />}
-            value={new Date()}
-          />
+         
         </div>
         <div>
-          <DatePicker
-            inputFormat="dd/MM/yyyy"
-            label="To"
-            onChange={() => {}}
-            renderInput={(inputProps) => <TextField {...inputProps} />}
-            value={new Date()}
-          />
+         
         </div>
         <Button
           size="large"

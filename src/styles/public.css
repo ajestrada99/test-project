@@ -1,0 +1,15 @@
+.title-component { 
+    color: #16b364;
+    font-size: 1.7rem;
+    margin: 0;
+}
+.divider-component { 
+    margin: 0;
+    border-radius: 1px solid #16b364;
+}
+
+.subtitle { 
+    margin: 0;
+    font-size: 1rem;
+    color: #16b364;
+}
